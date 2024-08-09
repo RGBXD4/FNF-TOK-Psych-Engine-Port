@@ -266,6 +266,11 @@ class ShopState extends MusicBeatState
 
 		if (FlxG.sound.music != null && FlxG.save.data.shop == false)
 			FlxG.sound.music.stop();
+
+		#if android
+addVirtualPad(FULL, A_B);
+		#end
+
 	}
 
 	function checkpress():Void
