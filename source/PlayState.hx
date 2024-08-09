@@ -1815,16 +1815,16 @@ class PlayState extends MusicBeatState
 
 		Conductor.safeZoneOffset = (ClientPrefs.safeFrames / 60) * 1000;
 		callOnLuas('onCreatePost', []);
-
-	#if android
-		addAndroidControls();
-		androidc.visible = true;
-		#end
 		
 		super.create();
 
 		Paths.clearUnusedMemory();
 		CustomFadeTransition.nextCamera = camOther;
+
+	#if android
+		addAndroidControls();
+		androidc.visible = true;
+		#end
 	}
 
 	function set_songSpeed(value:Float):Float
