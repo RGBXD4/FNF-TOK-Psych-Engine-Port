@@ -18,6 +18,7 @@ class FlxNewHitbox extends FlxSpriteGroup
 	public var buttonDown:FlxButton = new FlxButton(0, 0);
 	public var buttonUp:FlxButton = new FlxButton(0, 0);
 	public var buttonRight:FlxButton = new FlxButton(0, 0);
+	public var buttonSpace:FlxButton = new FlxButton(0, 0);
 
 	/**
 	 * Create the zone.
@@ -60,6 +61,7 @@ class FlxNewHitbox extends FlxSpriteGroup
 		buttonDown = null;
 		buttonUp = null;
 		buttonRight = null;
+		buttonSpace = null;
 	}
 
 	private function createHintGraphic(Width:Int, Height:Int, Color:Int = 0xFFFFFF):BitmapData
