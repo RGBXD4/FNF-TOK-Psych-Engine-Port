@@ -3285,7 +3285,7 @@ class PlayState extends MusicBeatState
 								});
 						}
 				
-				if (FlxG.keys.justPressed.SPACE && spaceriver == true)
+				if (controls.SPACE && spaceriver == true)
 					{
 						spaceriver = false;
 						if (uppath == true)
