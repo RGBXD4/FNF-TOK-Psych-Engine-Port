@@ -108,10 +108,10 @@ class TitleState extends MusicBeatState
 			}
 		}
 		#end*/
-
+#if desktop
 		GameJoltAPI.connect();
 		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
-		
+		#end
 		#if CHECK_FOR_UPDATES
 		if(!closedState) {
 			trace('checking for update');
@@ -478,8 +478,10 @@ class TitleState extends MusicBeatState
 				// FlxG.sound.music.stop();
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
-				{
-					MusicBeatState.switchState(new GameJoltLogin());
+			  {
+				   
+					MusicBeatState.switchState(new MainMenuState());
+			                
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);

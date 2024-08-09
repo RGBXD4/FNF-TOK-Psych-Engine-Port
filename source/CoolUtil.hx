@@ -8,9 +8,8 @@ import lime.utils.AssetManifest;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
-#else
-import openfl.utils.Assets;
 #end
+import openfl.utils.Assets;
 
 using StringTools;
 
@@ -53,11 +52,8 @@ class CoolUtil
 	public static function coolTextFile(path:String):Array<String>
 	{
 		var daList:Array<String> = [];
-		#if sys
-		if(FileSystem.exists(path)) daList = File.getContent(path).trim().split('\n');
-		#else
+
 		if(Assets.exists(path)) daList = Assets.getText(path).trim().split('\n');
-		#end
 
 		for (i in 0...daList.length)
 		{
@@ -115,17 +111,14 @@ class CoolUtil
 	}
 
 	//uhhhh does this even work at all? i'm starting to doubt
-	public static function precacheSound(sound:String, ?library:String = null):Void {
-		precacheSoundFile(Paths.sound(sound, library));
+	public static function precacheSound(sound:String, ?library:String = null):Void
+	{
+		Paths.sound(sound, library);
 	}
 
-	public static function precacheMusic(sound:String, ?library:String = null):Void {
-		precacheSoundFile(Paths.music(sound, library));
-	}
-
-	private static function precacheSoundFile(file:Dynamic):Void {
-		if (Assets.exists(file, SOUND) || Assets.exists(file, MUSIC))
-			Assets.getSound(file, true);
+	public static function precacheMusic(sound:String, ?library:String = null):Void
+	{
+		Paths.music(sound, library);
 	}
 
 	public static function browserLoad(site:String) {
