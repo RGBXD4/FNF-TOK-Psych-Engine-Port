@@ -58,9 +58,7 @@ class OptionsState extends MusicBeatState
 				
 				openSubState(new options.LanguageSubState());
 			case 'Gameplay':
-				#if android
-				removeVirtualPad();
-				#end
+				
 				openSubState(new options.GameplaySettingsSubState());
 			case 'Adjust Delay and Combo':
 				LoadingState.loadAndSwitchState(new options.NoteOffsetState());
@@ -103,7 +101,7 @@ class OptionsState extends MusicBeatState
 		changeSelection();
 		ClientPrefs.saveSettings();
 		#if android
-		addVirtualPad(UP_DOWN, A_B);
+		addVirtualPad(FULL, A_B);
 		#end
 
 		super.create();
