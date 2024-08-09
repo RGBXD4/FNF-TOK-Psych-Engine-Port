@@ -180,7 +180,7 @@ class CoinsScreen extends MusicBeatSubstate
         xtext.alpha = 0;
         add(xtext);
 
-        enterText = new FlxText(250, 415, FlxG.width, ("(Press enter to continue!)"), 120);
+        enterText = new FlxText(250, 415, FlxG.width, ("(Press tap to continue!)"), 120);
 		enterText.scrollFactor.set(0, 0);
 		enterText.setFormat(Paths.font("mario.ttf"), 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		enterText.borderSize = 2;
