@@ -76,6 +76,13 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'percent',
 			0);
 		addOption(option);
+		
+		var option:Option = new Option('Vpad Space',
+			'Check this if you want use vpad space',
+			'vpadSpace',
+			'bool',
+			false);
+		addOption(option);
 		option.scrollSpeed = 1.6;
 		option.minValue = 0.0;
 		option.maxValue = 1;
