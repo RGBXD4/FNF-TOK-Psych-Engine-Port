@@ -32,7 +32,7 @@ class ClientPrefs {
 	public static var controllerMode:Bool = true;
 	public static var hitsoundVolume:Float = 0;
 	public static var pauseMusic:String = 'Tea Time';
-	public static var vpadSpace:Bool = true;
+	public static var vpadSpace:Bool = false;
 	public static var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 
