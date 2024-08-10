@@ -1820,11 +1820,29 @@ class PlayState extends MusicBeatState
 
 		Paths.clearUnusedMemory();
 		CustomFadeTransition.nextCamera = camOther;
-
-	#if android
+if(ClientPrefs.vpadSpace)
+{
+	switch (PlayState.SONG.song.toLowerCase())
+	{
+		case 'eddy-river':
+	        #if android
+		addAndroidControls();
+	        addVirtualPad(NONE, A);
+		addPadCamera();
+		androidc.visible = true;
+		#end
+		default:
+		#if android
 		addAndroidControls();
 		androidc.visible = true;
 		#end
+	}
+}else{
+	#if android
+	addAndroidControls();
+	androidc.visible = true;
+	#end
+      }
 	}
 
 	function set_songSpeed(value:Float):Float
