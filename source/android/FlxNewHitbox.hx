@@ -30,7 +30,7 @@ class FlxNewHitbox extends FlxSpriteGroup
 		switch (PlayState.SONG.song.toLowerCase())
 		{
 		
-		case 'eddy river':
+		case 'eddy-river':
 			
 		add(buttonLeft = createHint(0, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 0.8), 0xFF00FF));
 		add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), Std.int(FlxG.height * 0.8), 0x00FFFF));
