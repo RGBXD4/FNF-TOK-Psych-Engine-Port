@@ -1826,9 +1826,10 @@ if(ClientPrefs.vpadSpace)
 	{
 		case 'eddy-river':
 	        #if android
-		addAndroidControls();
-	        addVirtualPad(NONE, MB);
+		addVirtualPad(NONE, MB);
 		addPadCamera();
+		
+		addAndroidControls();
 		androidc.visible = true;
 		#end
 		default:
