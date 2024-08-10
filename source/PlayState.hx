@@ -1822,12 +1822,12 @@ class PlayState extends MusicBeatState
 		CustomFadeTransition.nextCamera = camOther;
 if(ClientPrefs.vpadSpace)
 {
-	switch (PlayState.SONG.song.toLowerCase())
+	switch (SONG.song.toLowerCase())
 	{
 		case 'eddy-river':
 	        #if android
 		addAndroidControls();
-	        addVirtualPad(NONE, A);
+	        addVirtualPad(NONE, MB);
 		addPadCamera();
 		androidc.visible = true;
 		#end
