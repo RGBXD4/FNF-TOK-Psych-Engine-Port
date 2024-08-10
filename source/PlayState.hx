@@ -1825,13 +1825,13 @@ if(ClientPrefs.vpadSpace)
 	switch (SONG.song.toLowerCase())
 	{
 		case 'eddy-river':
-	        #if android
+		#if android
 		addVirtualPad(NONE, MB);
 		addPadCamera();
-		
 		addAndroidControls();
-		androidc.visible = true;
-		#end
+		androidc.visible = true;	
+		#end 
+
 		default:
 		#if android
 		addAndroidControls();
@@ -1839,11 +1839,11 @@ if(ClientPrefs.vpadSpace)
 		#end
 	}
 }else{
-	#if android
-	addAndroidControls();
-	androidc.visible = true;
-	#end
-      }
+		#if android
+		addAndroidControls();
+		androidc.visible = true;
+		#end
+		}
 	}
 
 	function set_songSpeed(value:Float):Float
