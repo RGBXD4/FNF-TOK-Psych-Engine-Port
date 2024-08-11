@@ -24,6 +24,9 @@ class CreditsRoll extends MusicBeatState
 	{
 		super.create();
 
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		#if windows
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Watching The Credits", null);
