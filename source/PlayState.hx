@@ -1686,7 +1686,7 @@ class PlayState extends MusicBeatState
 		#if LUA_ALLOWED
 		
 		var doPush:Bool = false;
-		var luaFile:String = 'data/' + Paths.formatToSongPath(SONG.song) + '/​camerashake.lua';
+		var luaFile:String = 'data/' + Paths.formatToSongPath(SONG.song) + '/camerashake.lua';
 		luaFile = Paths.getPreloadPath(luaFile);
 		if (OpenFlAssets.exists(luaFile))
 		{
