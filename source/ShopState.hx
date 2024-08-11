@@ -51,6 +51,9 @@ class ShopState extends MusicBeatState
 	{
 		super.create();
 
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
 		if (FlxG.save.data.shop == null)
 			FlxG.save.data.shop = false;
 
