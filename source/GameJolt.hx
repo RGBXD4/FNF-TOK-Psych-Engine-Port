@@ -433,7 +433,7 @@ class GameJoltLogin extends MusicBeatSubstate
             FlxG.sound.playMusic(Paths.music('freakyMenu'));
         }
 
-        if (FlxG.keys.justPressed.ESCAPE)
+        if (FlxG.keys.justPressed.ESCAPE #if android || FlxG.android.justReleased.BACK #end)
         {
             FlxG.mouse.visible = false;
             FlxG.switchState(new TitleState());
