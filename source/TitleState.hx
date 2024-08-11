@@ -2,10 +2,11 @@ package;
 
 #if desktop
 import Discord.DiscordClient;
-import GameJolt.GameJoltAPI;
-import GameJolt.GameJoltLogin;
 import sys.thread.Thread;
 #end
+import GameJolt.GameJoltAPI;
+import GameJolt.GameJoltLogin;
+
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -113,10 +114,10 @@ FlxG.android.preventDefaultKeys = [BACK];
 			}
 		}
 		#end*/
-#if desktop
+
 		GameJoltAPI.connect();
 		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
-		#end
+
 		#if CHECK_FOR_UPDATES
 		if(!closedState) {
 			trace('checking for update');
@@ -485,7 +486,7 @@ FlxG.android.preventDefaultKeys = [BACK];
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 			  {
 				   
-					MusicBeatState.switchState(new MainMenuState());
+					MusicBeatState.switchState(new GameJoltLogin());
 			                
 					closedState = true;
 				});
