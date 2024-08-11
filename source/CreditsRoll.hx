@@ -84,7 +84,7 @@ class CreditsRoll extends MusicBeatState
 						FlxTween.tween(credtxt, {y: -4400}, 57, {
 					onComplete: function(twn:FlxTween)
 					{
-						FlxG.switchState(new MainMenuState());
+						MusicBeatState.switchState(new MainMenuState());
 					}
 					});
 					}
@@ -117,7 +117,7 @@ class CreditsRoll extends MusicBeatState
 	{
 		if (controls.ACCEPT)
 		{
-			FlxG.switchState(new MainMenuState());
+			MusicBeatState.switchState(new MainMenuState());
 		}
 		super.update(elapsed);
 	}
