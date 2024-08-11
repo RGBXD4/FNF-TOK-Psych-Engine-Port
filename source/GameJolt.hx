@@ -57,7 +57,7 @@ import haxe.ds.ReadOnlyArray;
 import flixel.addons.api.FlxGameJolt as GJApi;
 
 import openfl.display.BitmapData;
-import flixel.ui.FlxButton;
+import android.flixel.FlxButton;
 import flixel.text.FlxText;
 import flixel.FlxSubState;
 import flixel.addons.ui.FlxUIInputText;
