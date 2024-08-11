@@ -3,7 +3,7 @@
 		"speed": 3,
 		"stage": "seatower",
 		"player1": "bf",
-		"player2": "Tape-desp",
+		"player2": "Tapedesp",
 		"player3": null,
 		"events": [
 			[
