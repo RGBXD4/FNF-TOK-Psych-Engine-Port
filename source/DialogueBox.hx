@@ -439,7 +439,7 @@ class DialogueBox extends FlxSpriteGroup
 			// box.flipX = true;
 		}
 
-		skipText = new FlxText(5, 695, 640, "Press SPACE to skip.\n", 40);
+		skipText = new FlxText(5, 695, 640, "Press BACK to skip.\n", 40);
 		skipText.scrollFactor.set(0, 0);
 		skipText.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		skipText.borderSize = 2;
