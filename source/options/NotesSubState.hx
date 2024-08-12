@@ -88,6 +88,10 @@ class NotesSubState extends MusicBeatSubstate
 		hsbText.x = posX + 240;
 		add(hsbText);
 
+		#if android
+		addVirtualPad(FULL, A_B);
+		#end
+
 		changeSelection();
 	}
 
