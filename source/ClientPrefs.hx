@@ -229,7 +229,7 @@ class ClientPrefs {
 			controllerMode = FlxG.save.data.controllerMode;
 		}
 		if(FlxG.save.data.vpadSpace != null) {
-			controllerMode = FlxG.save.data.vpadSpace;
+			vpadSpace = FlxG.save.data.vpadSpace;
 		}
 		if(FlxG.save.data.hitsoundVolume != null) {
 			hitsoundVolume = FlxG.save.data.hitsoundVolume;
